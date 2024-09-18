@@ -7,7 +7,8 @@ object RetrofitHelper {
     val baseUrl = "https://raw.githubusercontent.com/JbAhamed/bidyava_public_info/main/"
 
     fun getInstance(): Retrofit {
-        return Retrofit.Builder().baseUrl(baseUrl)
+        return Retrofit.Builder()
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
